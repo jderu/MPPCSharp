@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\RAZVAN\.Rider2019.3\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\RAZVAN\.Rider2019.3\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\RAZVAN\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\RAZVAN\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_MPPCSharp.-1558447563.00" t="ExcludeRecursive" />
+    <e p="C:\Users\RAZVAN\Desktop\C#\MPPCSharp" t="IncludeFlat">
+      <e p="MPPCSharp" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="domain" t="Include">
+          <e p="BookedTrip.cs" t="Include" />
+          <e p="BookedTripDTO.cs" t="Include" />
+          <e p="BookedTripID.cs" t="Include" />
+          <e p="Client.cs" t="Include" />
+          <e p="Destination.cs" t="Include" />
+          <e p="Entity.cs" t="Include" />
+          <e p="Trip.cs" t="Include" />
+          <e p="TripDTO.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+        </e>
+        <e p="Form1.cs" t="Include" />
+        <e p="Form1.Designer.cs" t="Include" />
+        <e p="Form1.resx" t="Include" />
+        <e p="Form2.cs" t="Include" />
+        <e p="Form2.Designer.cs" t="Include" />
+        <e p="Form2.resx" t="Include" />
+        <e p="Form3.cs" t="Include" />
+        <e p="Form3.Designer.cs" t="Include" />
+        <e p="Form3.resx" t="Include" />
+        <e p="MPPCSharp.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="MPPCSharp.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="repository" t="Include">
+          <e p="database" t="Include">
+            <e p="AbstractDatabaseRepository.cs" t="Include" />
+            <e p="DatabaseBookedTripRepository.cs" t="Include" />
+            <e p="DatabaseClientRepository.cs" t="Include" />
+            <e p="DatabaseDestinationRepository.cs" t="Include" />
+            <e p="DatabaseTripRepository.cs" t="Include" />
+            <e p="DatabaseUserRepository.cs" t="Include" />
+          </e>
+          <e p="IBookedTripRepository.cs" t="Include" />
+          <e p="IClientRepository.cs" t="Include" />
+          <e p="ICrudRepository.cs" t="Include" />
+          <e p="IDestinationRepository.cs" t="Include" />
+          <e p="ITripRepository.cs" t="Include" />
+          <e p="IUserRepository.cs" t="Include" />
+          <e p="JdbcUtils.cs" t="Include" />
+        </e>
+        <e p="service" t="Include">
+          <e p="AppService.cs" t="Include" />
+          <e p="AppServiceException.cs" t="Include" />
+          <e p="LoginService.cs" t="Include" />
+        </e>
+      </e>
+      <e p="MPPCSharp.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
