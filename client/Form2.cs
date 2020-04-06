@@ -8,16 +8,18 @@ namespace client {
 	public partial class Form2 : Form, IAppObserver {
 		private IAppServices _appService;
 		private readonly User _user;
-		private List<TripDTO> _data;
 		private Form3 form3;
 
 		public Form2(IAppServices appService, User user) {
 			_appService = appService;
 			_user = user;
 			InitializeComponent();
-			_data = _appService.ShowTrips();
-			foreach (TripDTO tripDto in _data) { table.Rows.Add(tripDto.DestinationName, tripDto.Departure, tripDto.FreeSeats); }
+			foreach (TripDTO tripDto in _appService.ShowTrips()) {
+				table.Rows.Add(tripDto.DestinationName, tripDto.Departure, tripDto.FreeSeats);
+			}
 		}
+
+		private void Form_FormClosing(object sender, EventArgs e) { _appService.Logout(_user.Id); }
 
 		private void table_CellClick(object sender, DataGridViewCellEventArgs e) {
 			string destinationName = table.SelectedRows[0].Cells[0].Value.ToString();
@@ -31,13 +33,13 @@ namespace client {
 
 		public void UpdateWindows(string destinationName, DateTime departure, int seatNumber, string clientName) {
 			Console.WriteLine("AppController");
-			foreach (TripDTO trip in _data)
-				if (trip.Departure == departure && trip.DestinationName == destinationName) {
-					trip.FreeSeats--;
+
+			foreach (DataGridViewRow row in table.Rows)
+				if (row.Cells[0].Value.ToString() == destinationName && row.Cells[1].Value.ToString() == departure.ToString()) {
+					row.Cells[2].Value = (int) row.Cells[2].Value - 1;
 					break;
 				}
 
-			//table.Refresh();
 			if (form3 != null && form3.Departure == departure && form3.Destination == destinationName)
 				form3.UpdateWindows(destinationName, departure, seatNumber, clientName);
 		}

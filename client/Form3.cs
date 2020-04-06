@@ -49,8 +49,6 @@ namespace client {
 					row.Cells[1].Value = clientName;
 					break;
 				}
-
-			//table.Refresh();
 		}
 	}
 }

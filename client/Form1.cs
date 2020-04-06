@@ -14,8 +14,7 @@ namespace client {
 			_service = service;
 			InitializeComponent();
 		}
-
-
+		
 		private void button1_Click(object sender, EventArgs e) {
 			string username = usernameTextBox.Text;
 			string password = passwordTextBox.Text;
