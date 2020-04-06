@@ -1,13 +1,13 @@
 ﻿namespace model {
-    public class BookedTripDTO {
-        public int ClientId { get; }
-        public string ClientName { get; }
-        public int SeatNumber { get; }
+	public class BookedTripDTO {
+		public int ClientId { get; set; }
+		public string ClientName { get; set; }
+		public int SeatNumber { get; set; }
 
-        public BookedTripDTO(int clientId, string clientName, int seatNumber) {
-            ClientId = clientId;
-            ClientName = clientName;
-            SeatNumber = seatNumber;
-        }
-    }
+		public BookedTripDTO(int clientId, string clientName, int seatNumber) {
+			ClientId = clientId;
+			ClientName = clientName;
+			SeatNumber = seatNumber;
+		}
+	}
 }

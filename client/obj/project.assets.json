@@ -1335,6 +1335,22 @@
           "Microsoft.WindowsDesktop.App.WindowsForms"
         ]
       },
+      "networking/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/networking.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/networking.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
       "persistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.0",
@@ -1348,6 +1364,24 @@
         },
         "runtime": {
           "bin/placeholder/persistence.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "server/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "networking": "1.0.0",
+          "persistence": "1.0.0",
+          "services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/server.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/server.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WindowsForms"
@@ -4754,10 +4788,20 @@
       "path": "../model/model.csproj",
       "msbuildProject": "../model/model.csproj"
     },
+    "networking/1.0.0": {
+      "type": "project",
+      "path": "../networking/networking.csproj",
+      "msbuildProject": "../networking/networking.csproj"
+    },
     "persistence/1.0.0": {
       "type": "project",
       "path": "../persistence/persistence.csproj",
       "msbuildProject": "../persistence/persistence.csproj"
+    },
+    "server/1.0.0": {
+      "type": "project",
+      "path": "../server/server.csproj",
+      "msbuildProject": "../server/server.csproj"
     },
     "services/1.0.0": {
       "type": "project",
@@ -4768,6 +4812,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "persistence >= 1.0.0",
+      "server >= 1.0.0",
       "services >= 1.0.0"
     ]
   },
@@ -4803,6 +4848,9 @@
           "projectReferences": {
             "C:\\Users\\RAZVAN\\Desktop\\C#\\MPPCSharp\\persistence\\persistence.csproj": {
               "projectPath": "C:\\Users\\RAZVAN\\Desktop\\C#\\MPPCSharp\\persistence\\persistence.csproj"
+            },
+            "C:\\Users\\RAZVAN\\Desktop\\C#\\MPPCSharp\\server\\server.csproj": {
+              "projectPath": "C:\\Users\\RAZVAN\\Desktop\\C#\\MPPCSharp\\server\\server.csproj"
             },
             "C:\\Users\\RAZVAN\\Desktop\\C#\\MPPCSharp\\services\\services.csproj": {
               "projectPath": "C:\\Users\\RAZVAN\\Desktop\\C#\\MPPCSharp\\services\\services.csproj"

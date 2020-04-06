@@ -6,11 +6,12 @@ using persistence.database;
 using services;
 
 namespace client {
-	public partial class Form1 : Form {
-		private readonly LoginService _loginService;
+	public partial class Form1 : Form, IAppObserver {
+		private IAppServices _service;
+		private Form2 form2;
 
-		public Form1(LoginService loginService) {
-			_loginService = loginService;
+		public Form1(IAppServices service) {
+			_service = service;
 			InitializeComponent();
 		}
 
@@ -18,20 +19,17 @@ namespace client {
 		private void button1_Click(object sender, EventArgs e) {
 			string username = usernameTextBox.Text;
 			string password = passwordTextBox.Text;
-			User user = _loginService.Login(username, password);
+			User user = _service.Login(username, password, this);
 			if (user != null) {
-				using JdbcUtils jdbcUtilsApp = new JdbcUtils("./AppDatabase.txt");
-
-				IBookedTripRepository bookedTripRepository = new DatabaseBookedTripRepository(jdbcUtilsApp);
-				IClientRepository clientRepository = new DatabaseClientRepository(jdbcUtilsApp);
-				IDestinationRepository destinationRepository = new DatabaseDestinationRepository(jdbcUtilsApp);
-				ITripRepository tripRepository = new DatabaseTripRepository(jdbcUtilsApp);
-				AppService appService = new AppService(bookedTripRepository, clientRepository, destinationRepository, tripRepository);
-
 				this.Hide();
-				Form2 form2 = new Form2(appService);
+				form2 = new Form2(_service, user);
 				form2.ShowDialog();
 			} else { MessageBox.Show("Wrong username and password"); }
+		}
+
+		public void UpdateWindows(string destinationName, DateTime departure, int seatNumber, string clientName) {
+			Console.WriteLine("loginController");
+			form2.UpdateWindows(destinationName, departure, seatNumber, clientName);
 		}
 	}
 }

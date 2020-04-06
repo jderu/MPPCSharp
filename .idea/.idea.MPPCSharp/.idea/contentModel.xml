@@ -49,9 +49,9 @@
       </e>
       <e p="MPPCSharp.sln" t="IncludeFlat" />
       <e p="networking" t="IncludeRecursive">
+        <e p="AppClientObjectWorker.cs" t="Include" />
+        <e p="AppProxyService.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="ChatClientObjectWorker.cs" t="Include" />
-        <e p="ChatServerObjectProxy.cs" t="Include" />
         <e p="dto" t="Include">
           <e p="NetBookedTripDTO.cs" t="Include" />
           <e p="NetReservedDTO.cs" t="Include" />
@@ -110,6 +110,7 @@
         </e>
         <e p="Server.cs" t="Include" />
         <e p="server.csproj" t="IncludeRecursive" />
+        <e p="StartServer.cs" t="Include" />
       </e>
       <e p="services" t="IncludeRecursive">
         <e p="AppServiceException.cs" t="Include" />

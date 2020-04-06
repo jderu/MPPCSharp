@@ -16,7 +16,7 @@ namespace networking {
 	/// * Date: Mar 18, 2009
 	/// * Time: 4:36:34 PM </summary>
 	/// 
-	public class ChatServerProxy : IAppServices {
+	public class AppProxyService : IAppServices {
 		private string _host;
 		private int _port;
 
@@ -31,7 +31,7 @@ namespace networking {
 		private volatile bool _finished;
 		private EventWaitHandle _waitHandle;
 
-		public ChatServerProxy(string host, int port) {
+		public AppProxyService(string host, int port) {
 			this._host = host;
 			this._port = port;
 			_responses = new Queue<IResponse>();

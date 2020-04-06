@@ -50,10 +50,10 @@ namespace networking {
 	}
 
 	[Serializable] public class LogoutRequest : IRequest {
-		private int _userID;
+		private int _dto;
 
-		public LogoutRequest(int userID) { this._userID = userID; }
+		public LogoutRequest(int dto) { this._dto = dto; }
 
-		public virtual int UserID => _userID;
+		public virtual int DTO => _dto;
 	}
 }

@@ -19,6 +19,9 @@
     "frameworks": {
       "netcoreapp3.0": {
         "projectReferences": {
+          "C:\\Users\\RAZVAN\\Desktop\\C#\\MPPCSharp\\networking\\networking.csproj": {
+            "projectPath": "C:\\Users\\RAZVAN\\Desktop\\C#\\MPPCSharp\\networking\\networking.csproj"
+          },
           "C:\\Users\\RAZVAN\\Desktop\\C#\\MPPCSharp\\persistence\\persistence.csproj": {
             "projectPath": "C:\\Users\\RAZVAN\\Desktop\\C#\\MPPCSharp\\persistence\\persistence.csproj"
           },

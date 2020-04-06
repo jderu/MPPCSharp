@@ -67,16 +67,11 @@ namespace networking {
 	[Serializable] public class GetBookedTripIDResponse : IResponse {
 		private int? _dto;
 
-		public GetBookedTripIDResponse(int dto) { this._dto = dto; }
+		public GetBookedTripIDResponse(int? dto) { this._dto = dto; }
 
 		public virtual int? DTO => _dto;
 	}
 
 	[Serializable] public class ReserveSeatResponse : IResponse {
-		private NetReservedDTO _dto;
-
-		public ReserveSeatResponse(NetReservedDTO dto) { this._dto = dto; }
-
-		public virtual NetReservedDTO DTO => _dto;
 	}
 }

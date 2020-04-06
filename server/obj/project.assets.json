@@ -1335,6 +1335,22 @@
           "Microsoft.WindowsDesktop.App.WindowsForms"
         ]
       },
+      "networking/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/networking.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/networking.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
       "persistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.0",
@@ -4754,6 +4770,11 @@
       "path": "../model/model.csproj",
       "msbuildProject": "../model/model.csproj"
     },
+    "networking/1.0.0": {
+      "type": "project",
+      "path": "../networking/networking.csproj",
+      "msbuildProject": "../networking/networking.csproj"
+    },
     "persistence/1.0.0": {
       "type": "project",
       "path": "../persistence/persistence.csproj",
@@ -4767,6 +4788,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
+      "networking >= 1.0.0",
       "persistence >= 1.0.0",
       "services >= 1.0.0"
     ]
@@ -4801,6 +4823,9 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
+            "C:\\Users\\RAZVAN\\Desktop\\C#\\MPPCSharp\\networking\\networking.csproj": {
+              "projectPath": "C:\\Users\\RAZVAN\\Desktop\\C#\\MPPCSharp\\networking\\networking.csproj"
+            },
             "C:\\Users\\RAZVAN\\Desktop\\C#\\MPPCSharp\\persistence\\persistence.csproj": {
               "projectPath": "C:\\Users\\RAZVAN\\Desktop\\C#\\MPPCSharp\\persistence\\persistence.csproj"
             },

@@ -11,12 +11,12 @@ namespace server {
 		private readonly IClientRepository _clientRepo;
 		private readonly IDestinationRepository _destinationRepo;
 		private readonly ITripRepository _tripRepo;
-		private readonly IUserRepository _users;
+		private readonly IUserRepository _userRepo;
 		private readonly IDictionary<int, IAppObserver> _loggedUsers;
 
-		public Server(IUserRepository users, IBookedTripRepository bookedTripRepo, IClientRepository clientRepo,
+		public Server(IUserRepository userRepo, IBookedTripRepository bookedTripRepo, IClientRepository clientRepo,
 			IDestinationRepository destinationRepo, ITripRepository tripRepo) {
-			_users = users;
+			_userRepo = userRepo;
 			_bookedTripRepo = bookedTripRepo;
 			_clientRepo = clientRepo;
 			_destinationRepo = destinationRepo;
@@ -25,7 +25,7 @@ namespace server {
 		}
 
 		public User Login(String username, String password, IAppObserver client) {
-			User user = _users.FindByUsername(username);
+			User user = _userRepo.FindByUsername(username);
 			if (user == null)
 				return null;
 			if (_loggedUsers.ContainsKey(user.Id))
@@ -91,15 +91,6 @@ namespace server {
 
 		public int? GetTripIdByDestinationAndDeparture(String destination, DateTime departure) {
 			return _tripRepo.GetTripIdByDestinationAndDeparture(destination, departure);
-		}
-
-		public List<BookedTripDTO> CreateList(List<BookedTripDTO> result) {
-			List<BookedTripDTO> temporary = new List<BookedTripDTO>(18);
-			for (int i = 0; i < 18; i++)
-				temporary.Add(new BookedTripDTO(-1, "-", i + 1));
-			foreach (var a in result)
-				temporary[a.SeatNumber - 1] = a;
-			return temporary;
 		}
 	}
 }
