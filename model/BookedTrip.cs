@@ -1,5 +1,7 @@
-﻿namespace model {
-	public class BookedTrip : Entity<BookedTripID> {
+﻿using System;
+
+namespace model {
+	[Serializable]public class BookedTrip : Entity<BookedTripID> {
 		public int ClientId { get; set; }
 
 		public int TripId { get => Id.TripId; set => Id.TripId = value; }

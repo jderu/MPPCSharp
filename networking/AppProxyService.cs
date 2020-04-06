@@ -92,7 +92,7 @@ namespace networking {
 
 		private void HandleUpdate(IUpdateResponse update) {
 			if (update is ReservedResponse) {
-				NetUpdateDTO netUpdateDTO = update as NetUpdateDTO;
+				NetUpdateDTO netUpdateDTO = ((ReservedResponse) update).NetUpdateDTO;
 				_client.UpdateWindows(netUpdateDTO.DestinationName, netUpdateDTO.Departure, netUpdateDTO.SeatNumber,
 					netUpdateDTO.ClientName);
 			}
@@ -163,7 +163,9 @@ namespace networking {
 			}
 
 			CloseConnection();
-			throw new AppServiceException(((ErrorResponse) response).Message);
+			if (response is ErrorResponse errorResponse)
+				throw new AppServiceException(errorResponse.Message);
+			return null;
 		}
 
 		public void Logout(int userId) {

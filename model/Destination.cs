@@ -1,5 +1,7 @@
-﻿namespace model {
-    public class Destination:Entity<int> {
+﻿using System;
+
+namespace model {
+    [Serializable]public class Destination:Entity<int> {
         public string Name { get; set; }
 
         public Destination(int id, string name) : base(id) { Name = name; }

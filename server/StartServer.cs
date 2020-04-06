@@ -6,9 +6,7 @@ using persistence;
 using persistence.database;
 using services;
 
-namespace chat {
-	using server;
-
+namespace server {
 	class StartServer {
 		static void Main(string[] args) {
 			using JdbcUtils jdbcUtilsUser = new JdbcUtils("./UserDatabase.txt");

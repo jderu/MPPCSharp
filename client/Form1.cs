@@ -19,12 +19,15 @@ namespace client {
 		private void button1_Click(object sender, EventArgs e) {
 			string username = usernameTextBox.Text;
 			string password = passwordTextBox.Text;
-			User user = _service.Login(username, password, this);
-			if (user != null) {
-				this.Hide();
-				form2 = new Form2(_service, user);
-				form2.ShowDialog();
-			} else { MessageBox.Show("Wrong username and password"); }
+			try {
+				User user = _service.Login(username, password, this);
+				if (user != null) {
+					this.Hide();
+					form2 = new Form2(_service, user);
+					form2.ShowDialog();
+				} else { MessageBox.Show("Wrong username and password"); }
+			}
+			catch (AppServiceException ex) { MessageBox.Show(ex.Message); }
 		}
 
 		public void UpdateWindows(string destinationName, DateTime departure, int seatNumber, string clientName) {

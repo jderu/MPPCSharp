@@ -1,11 +1,9 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Net.Sockets;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
-using model;
 using networking.dto;
 using services;
 
@@ -36,7 +34,7 @@ namespace networking {
 			catch (Exception e) { Console.WriteLine(e.StackTrace); }
 		}
 
-		public virtual void Run() {
+		public void Run() {
 			while (_connected) {
 				try {
 					object request = _formatter.Deserialize(_stream);
@@ -62,88 +60,76 @@ namespace networking {
 			if (request is LoginRequest) {
 				Console.WriteLine("Login request ...");
 				UserDTO userDTO = ((LoginRequest) request).DTO;
-				try {
-					User user;
-					lock (_server) { user = _server.Login(userDTO.Username, userDTO.Password, this); }
-
-					return new LoginResponse(user);
-				}
-				catch (AppServiceException e) {
-					_connected = false;
-					return new ErrorResponse(e.Message);
+				lock (_server) {
+					try { return new LoginResponse(_server.Login(userDTO.Username, userDTO.Password, this)); }
+					catch (AppServiceException e) {
+						_connected = false;
+						return new ErrorResponse(e.Message);
+					}
 				}
 			}
 
 			if (request is LogoutRequest) {
 				Console.WriteLine("Logout request ...");
 				int userID = ((LogoutRequest) request).DTO;
-				try {
-					lock (_server) { _server.Logout(userID); }
-
-					_connected = false;
-					return new LogoutResponse();
+				lock (_server) {
+					try {
+						_server.Logout(userID);
+						_connected = false;
+						return new LogoutResponse();
+					}
+					catch (AppServiceException e) { return new ErrorResponse(e.Message); }
 				}
-				catch (AppServiceException e) { return new ErrorResponse(e.Message); }
 			}
 
 			if (request is GetTripsRequest) {
 				Console.WriteLine("GetTrips request ...");
-				try {
-					List<TripDTO> trips;
-					lock (_server) { trips = _server.ShowTrips(); }
-
-					return new GetTripsResponse(trips);
+				lock (_server) {
+					try { return new GetTripsResponse(_server.ShowTrips()); }
+					catch (AppServiceException e) { return new ErrorResponse(e.Message); }
 				}
-				catch (AppServiceException e) { return new ErrorResponse(e.Message); }
 			}
 
 			if (request is GetBookedTripsRequest) {
 				Console.WriteLine("GetBookedTrips request ...");
 				NetTripDTO netTripDTO = ((GetBookedTripsRequest) request).DTO;
-				try {
-					List<BookedTripDTO> trips;
-					lock (_server) { trips = _server.Search(netTripDTO.DestinationName, netTripDTO.Departure); }
-
-					return new GetBookedTripsResponse(trips);
+				lock (_server) {
+					try { return new GetBookedTripsResponse(_server.Search(netTripDTO.DestinationName, netTripDTO.Departure)); }
+					catch (AppServiceException e) { return new ErrorResponse(e.Message); }
 				}
-				catch (AppServiceException e) { return new ErrorResponse(e.Message); }
 			}
 
 			if (request is GetBookedTripRequest) {
 				Console.WriteLine("GetBookedTrip request ...");
 				NetBookedTripDTO netTripDTO = ((GetBookedTripRequest) request).DTO;
-				try {
-					BookedTrip trip;
-					lock (_server) { trip = _server.FindClientId(netTripDTO.TripId, netTripDTO.SeatNumber); }
-
-					return new GetBookedTripResponse(trip);
+				lock (_server) {
+					try { return new GetBookedTripResponse(_server.FindClientId(netTripDTO.TripId, netTripDTO.SeatNumber)); }
+					catch (AppServiceException e) { return new ErrorResponse(e.Message); }
 				}
-				catch (AppServiceException e) { return new ErrorResponse(e.Message); }
 			}
 
 			if (request is GetBookedTripIDRequest) {
 				Console.WriteLine("GetBookedTrip request ...");
 				NetTripDTO netTripDTO = ((GetBookedTripIDRequest) request).DTO;
-				try {
-					int? id;
-					lock (_server) {
-						id = _server.GetTripIdByDestinationAndDeparture(netTripDTO.DestinationName, netTripDTO.Departure);
+				lock (_server) {
+					try {
+						return new GetBookedTripIDResponse(
+							_server.GetTripIdByDestinationAndDeparture(netTripDTO.DestinationName, netTripDTO.Departure));
 					}
-
-					return new GetBookedTripIDResponse(id);
+					catch (AppServiceException e) { return new ErrorResponse(e.Message); }
 				}
-				catch (AppServiceException e) { return new ErrorResponse(e.Message); }
 			}
 
 			if (request is ReserveSeatRequest) {
 				Console.WriteLine("GetBookedTrip request ...");
 				NetReservedDTO netReservedDTO = ((ReserveSeatRequest) request).DTO;
-				try {
-					lock (_server) { _server.Reserve(netReservedDTO.TripId, netReservedDTO.ClientName, netReservedDTO.SeatNumber); }
-
-					return new ReserveSeatResponse();
+				lock (_server) {
+					try {
+						_server.Reserve(netReservedDTO.TripId, netReservedDTO.ClientName, netReservedDTO.SeatNumber);
+						return new ReserveSeatResponse();
+					}
+					catch (AppServiceException e) { return new ErrorResponse(e.Message); }
 				}
-				catch (AppServiceException e) { return new ErrorResponse(e.Message); }
 			}
 
 			return response;

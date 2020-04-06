@@ -77,12 +77,8 @@ namespace server {
 		}
 
 		private void NotifyUsers(String destinationName, DateTime departure, int seatNumber, String clientName) {
-			foreach (User us in _loggedUsers.Values) {
-				if (_loggedUsers.ContainsKey(us.Id)) {
-					IAppObserver chatClient = _loggedUsers[us.Id];
-					Task.Run(() => chatClient.UpdateWindows(destinationName, departure, seatNumber, clientName));
-				}
-			}
+			foreach (IAppObserver appClient in _loggedUsers.Values)
+				Task.Run(() => appClient.UpdateWindows(destinationName, departure, seatNumber, clientName));
 		}
 
 		public List<TripDTO> ShowTrips() { return _tripRepo.GetAllTrips(); }

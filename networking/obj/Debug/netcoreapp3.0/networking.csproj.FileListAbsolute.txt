@@ -1,0 +1,15 @@
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\networking\bin\Debug\netcoreapp3.0\networking.deps.json
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\networking\bin\Debug\netcoreapp3.0\networking.dll
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\networking\bin\Debug\netcoreapp3.0\networking.pdb
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\networking\bin\Debug\netcoreapp3.0\model.dll
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\networking\bin\Debug\netcoreapp3.0\persistence.dll
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\networking\bin\Debug\netcoreapp3.0\services.dll
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\networking\bin\Debug\netcoreapp3.0\services.pdb
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\networking\bin\Debug\netcoreapp3.0\model.pdb
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\networking\bin\Debug\netcoreapp3.0\persistence.pdb
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\networking\obj\Debug\netcoreapp3.0\networking.csprojAssemblyReference.cache
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\networking\obj\Debug\netcoreapp3.0\networking.AssemblyInfoInputs.cache
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\networking\obj\Debug\netcoreapp3.0\networking.AssemblyInfo.cs
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\networking\obj\Debug\netcoreapp3.0\networking.csproj.CopyComplete
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\networking\obj\Debug\netcoreapp3.0\networking.dll
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\networking\obj\Debug\netcoreapp3.0\networking.pdb

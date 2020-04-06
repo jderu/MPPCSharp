@@ -11,7 +11,6 @@ namespace client {
 		private readonly User _result;
 		public string Destination;
 		public DateTime Departure;
-		private List<BookedTripDTO> _data;
 
 		public Form3(IAppServices appService, User result, int tripId, string destination, in DateTime departure) {
 			_tripId = tripId;
@@ -29,7 +28,6 @@ namespace client {
 			int seatNumber = int.Parse(seatNumberTextBox.Text);
 			try {
 				_appService.Reserve(_tripId, name, seatNumber);
-				table.Rows[seatNumber - 1].SetValues(seatNumber, name);
 			}
 			catch (AppServiceException exception) { MessageBox.Show(exception.Message); }
 		}
@@ -46,9 +44,9 @@ namespace client {
 
 		public void UpdateWindows(string destinationName, DateTime departure, int seatNumber, string clientName) {
 			Console.WriteLine("tripController");
-			foreach (BookedTripDTO trip in _data)
-				if (trip.SeatNumber == seatNumber) {
-					trip.ClientName = clientName;
+			foreach (DataGridViewRow row in table.Rows)
+				if (row.Cells[0].Value.ToString() == seatNumber.ToString()) {
+					row.Cells[1].Value = clientName;
 					break;
 				}
 

@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace model {
-    public class Trip : Entity<int> {
+    [Serializable]public class Trip : Entity<int> {
         public DateTime Departure { get; set; }
 
         public int FreeSeats { get; set; }

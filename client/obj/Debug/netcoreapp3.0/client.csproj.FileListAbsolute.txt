@@ -22,3 +22,8 @@ C:\Users\RAZVAN\Desktop\C#\MPPCSharp\client\obj\Debug\netcoreapp3.0\client.Assem
 C:\Users\RAZVAN\Desktop\C#\MPPCSharp\client\obj\Debug\netcoreapp3.0\client.csproj.CopyComplete
 C:\Users\RAZVAN\Desktop\C#\MPPCSharp\client\obj\Debug\netcoreapp3.0\client.dll
 C:\Users\RAZVAN\Desktop\C#\MPPCSharp\client\obj\Debug\netcoreapp3.0\client.pdb
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\client\bin\Debug\netcoreapp3.0\server.exe
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\client\bin\Debug\netcoreapp3.0\networking.dll
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\client\bin\Debug\netcoreapp3.0\server.dll
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\client\bin\Debug\netcoreapp3.0\server.pdb
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\client\bin\Debug\netcoreapp3.0\networking.pdb
