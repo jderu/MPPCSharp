@@ -6,19 +6,9 @@
     <e p="C:\Users\RAZVAN\.Rider2019.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\RAZVAN\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_MPPCSharp.-1558447563.00" t="ExcludeRecursive" />
     <e p="C:\Users\RAZVAN\Desktop\C#\MPPCSharp" t="IncludeFlat">
-      <e p="MPPCSharp" t="IncludeRecursive">
+      <e p="client" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="domain" t="Include">
-          <e p="BookedTrip.cs" t="Include" />
-          <e p="BookedTripDTO.cs" t="Include" />
-          <e p="BookedTripID.cs" t="Include" />
-          <e p="Client.cs" t="Include" />
-          <e p="Destination.cs" t="Include" />
-          <e p="Entity.cs" t="Include" />
-          <e p="Trip.cs" t="Include" />
-          <e p="TripDTO.cs" t="Include" />
-          <e p="User.cs" t="Include" />
-        </e>
+        <e p="client.csproj" t="IncludeRecursive" />
         <e p="Form1.cs" t="Include" />
         <e p="Form1.Designer.cs" t="Include" />
         <e p="Form1.resx" t="Include" />
@@ -28,40 +18,113 @@
         <e p="Form3.cs" t="Include" />
         <e p="Form3.Designer.cs" t="Include" />
         <e p="Form3.resx" t="Include" />
-        <e p="MPPCSharp.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">
-              <e p="MPPCSharp.AssemblyInfo.cs" t="Include" />
+              <e p="client.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
         <e p="Program.cs" t="Include" />
-        <e p="repository" t="Include">
-          <e p="database" t="Include">
-            <e p="AbstractDatabaseRepository.cs" t="Include" />
-            <e p="DatabaseBookedTripRepository.cs" t="Include" />
-            <e p="DatabaseClientRepository.cs" t="Include" />
-            <e p="DatabaseDestinationRepository.cs" t="Include" />
-            <e p="DatabaseTripRepository.cs" t="Include" />
-            <e p="DatabaseUserRepository.cs" t="Include" />
+      </e>
+      <e p="model" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="BookedTrip.cs" t="Include" />
+        <e p="BookedTripDTO.cs" t="Include" />
+        <e p="BookedTripID.cs" t="Include" />
+        <e p="Client.cs" t="Include" />
+        <e p="Destination.cs" t="Include" />
+        <e p="Entity.cs" t="Include" />
+        <e p="model.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="model.AssemblyInfo.cs" t="Include" />
+            </e>
           </e>
-          <e p="IBookedTripRepository.cs" t="Include" />
-          <e p="IClientRepository.cs" t="Include" />
-          <e p="ICrudRepository.cs" t="Include" />
-          <e p="IDestinationRepository.cs" t="Include" />
-          <e p="ITripRepository.cs" t="Include" />
-          <e p="IUserRepository.cs" t="Include" />
-          <e p="JdbcUtils.cs" t="Include" />
         </e>
-        <e p="service" t="Include">
-          <e p="AppService.cs" t="Include" />
-          <e p="AppServiceException.cs" t="Include" />
-          <e p="LoginService.cs" t="Include" />
-        </e>
+        <e p="Trip.cs" t="Include" />
+        <e p="TripDTO.cs" t="Include" />
+        <e p="User.cs" t="Include" />
       </e>
       <e p="MPPCSharp.sln" t="IncludeFlat" />
+      <e p="networking" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ChatClientObjectWorker.cs" t="Include" />
+        <e p="ChatServerObjectProxy.cs" t="Include" />
+        <e p="dto" t="Include">
+          <e p="NetBookedTripDTO.cs" t="Include" />
+          <e p="NetReservedDTO.cs" t="Include" />
+          <e p="NetTripDTO.cs" t="Include" />
+          <e p="NetUpdateDTO.cs" t="Include" />
+          <e p="UserDTO.cs" t="Include" />
+        </e>
+        <e p="networking.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="networking.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ObjectRequestProtocol.cs" t="Include" />
+        <e p="ObjectResponseProtocol.cs" t="Include" />
+        <e p="ServerUtils.cs" t="Include" />
+      </e>
       <e p="packages" t="ExcludeRecursive" />
+      <e p="persistence" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="database" t="Include">
+          <e p="AbstractDatabaseRepository.cs" t="Include" />
+          <e p="DatabaseBookedTripRepository.cs" t="Include" />
+          <e p="DatabaseClientRepository.cs" t="Include" />
+          <e p="DatabaseDestinationRepository.cs" t="Include" />
+          <e p="DatabaseTripRepository.cs" t="Include" />
+          <e p="DatabaseUserRepository.cs" t="Include" />
+        </e>
+        <e p="IBookedTripRepository.cs" t="Include" />
+        <e p="IClientRepository.cs" t="Include" />
+        <e p="ICrudRepository.cs" t="Include" />
+        <e p="IDestinationRepository.cs" t="Include" />
+        <e p="ITripRepository.cs" t="Include" />
+        <e p="IUserRepository.cs" t="Include" />
+        <e p="JdbcUtils.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="persistence.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="persistence.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="server" t="IncludeRecursive">
+        <e p="AppServiceException.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="server.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Server.cs" t="Include" />
+        <e p="server.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="services" t="IncludeRecursive">
+        <e p="AppServiceException.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="IAppObserver.cs" t="Include" />
+        <e p="IAppServices.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="services.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="services.csproj" t="IncludeRecursive" />
+      </e>
     </e>
   </component>
 </project>

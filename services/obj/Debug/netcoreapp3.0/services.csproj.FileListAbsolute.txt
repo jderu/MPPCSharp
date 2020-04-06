@@ -1,0 +1,13 @@
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\services\bin\Debug\netcoreapp3.0\services.deps.json
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\services\bin\Debug\netcoreapp3.0\services.dll
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\services\bin\Debug\netcoreapp3.0\services.pdb
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\services\bin\Debug\netcoreapp3.0\model.dll
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\services\bin\Debug\netcoreapp3.0\persistence.dll
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\services\bin\Debug\netcoreapp3.0\persistence.pdb
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\services\bin\Debug\netcoreapp3.0\model.pdb
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\services\obj\Debug\netcoreapp3.0\services.csprojAssemblyReference.cache
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\services\obj\Debug\netcoreapp3.0\services.AssemblyInfoInputs.cache
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\services\obj\Debug\netcoreapp3.0\services.AssemblyInfo.cs
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\services\obj\Debug\netcoreapp3.0\services.csproj.CopyComplete
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\services\obj\Debug\netcoreapp3.0\services.dll
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\services\obj\Debug\netcoreapp3.0\services.pdb

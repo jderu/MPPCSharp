@@ -1,0 +1,11 @@
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\persistence\obj\Debug\netcoreapp3.0\persistence.csprojAssemblyReference.cache
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\persistence\obj\Debug\netcoreapp3.0\persistence.AssemblyInfoInputs.cache
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\persistence\obj\Debug\netcoreapp3.0\persistence.AssemblyInfo.cs
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\persistence\bin\Debug\netcoreapp3.0\persistence.deps.json
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\persistence\bin\Debug\netcoreapp3.0\persistence.dll
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\persistence\bin\Debug\netcoreapp3.0\persistence.pdb
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\persistence\bin\Debug\netcoreapp3.0\model.dll
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\persistence\bin\Debug\netcoreapp3.0\model.pdb
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\persistence\obj\Debug\netcoreapp3.0\persistence.csproj.CopyComplete
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\persistence\obj\Debug\netcoreapp3.0\persistence.dll
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\persistence\obj\Debug\netcoreapp3.0\persistence.pdb
