@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using model;
-using persistence;
-using persistence.database;
 using services;
 
 namespace client {

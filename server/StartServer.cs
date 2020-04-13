@@ -37,7 +37,7 @@ namespace server {
 
 		protected override Thread CreateWorker(TcpClient client) {
 			worker = new AppClientWorker(server, client);
-			return new Thread(new ThreadStart(worker.Run));
+			return new Thread(worker.Run);
 		}
 	}
 }

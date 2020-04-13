@@ -76,6 +76,7 @@ namespace client {
 			this.Controls.Add(this.table);
 			this.Name = "Form2";
 			this.Text = "Form2";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_FormClosing);
 			((System.ComponentModel.ISupportInitialize) (this.table)).EndInit();
 			this.ResumeLayout(false);
 		}

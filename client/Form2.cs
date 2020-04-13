@@ -19,7 +19,9 @@ namespace client {
 			}
 		}
 
-		private void Form_FormClosing(object sender, EventArgs e) { _appService.Logout(_user.Id); }
+		private void Form_FormClosing(object sender, FormClosingEventArgs e) {
+			if (e.CloseReason == CloseReason.UserClosing) { _appService.Logout(_user.Id); }
+		}
 
 		private void table_CellClick(object sender, DataGridViewCellEventArgs e) {
 			string destinationName = table.SelectedRows[0].Cells[0].Value.ToString();
