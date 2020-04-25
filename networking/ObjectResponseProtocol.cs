@@ -56,14 +56,6 @@ namespace networking {
 		public virtual List<BookedTripDTO> DTO => _dto;
 	}
 
-	[Serializable] public class GetBookedTripResponse : IResponse {
-		private BookedTrip _dto;
-
-		public GetBookedTripResponse(BookedTrip dto) { this._dto = dto; }
-
-		public virtual BookedTrip DTO => _dto;
-	}
-
 	[Serializable] public class GetBookedTripIDResponse : IResponse {
 		private int? _dto;
 

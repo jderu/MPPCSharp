@@ -48,29 +48,6 @@
         <e p="User.cs" t="Include" />
       </e>
       <e p="MPPCSharp.sln" t="IncludeFlat" />
-      <e p="networking" t="IncludeRecursive">
-        <e p="AppClientObjectWorker.cs" t="Include" />
-        <e p="AppProxyService.cs" t="Include" />
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="dto" t="Include">
-          <e p="NetBookedTripDTO.cs" t="Include" />
-          <e p="NetReservedDTO.cs" t="Include" />
-          <e p="NetTripDTO.cs" t="Include" />
-          <e p="NetUpdateDTO.cs" t="Include" />
-          <e p="UserDTO.cs" t="Include" />
-        </e>
-        <e p="networking.csproj" t="IncludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp3.0" t="Include">
-              <e p="networking.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="ObjectRequestProtocol.cs" t="Include" />
-        <e p="ObjectResponseProtocol.cs" t="Include" />
-        <e p="ServerUtils.cs" t="Include" />
-      </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="persistence" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
@@ -103,12 +80,17 @@
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">
+              <e p="App.cs" t="Include" />
+              <e p="AppGrpc.cs" t="Include" />
               <e p="server.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
-        <e p="Server.cs" t="Include" />
+        <e p="Protos" t="Include">
+          <e p="app.proto" t="Include" />
+        </e>
         <e p="server.csproj" t="IncludeRecursive" />
+        <e p="ServerImpl.cs" t="Include" />
         <e p="StartServer.cs" t="Include" />
       </e>
       <e p="services" t="IncludeRecursive">

@@ -1,4 +1,3 @@
-C:\Users\RAZVAN\Desktop\C#\MPPCSharp\model\obj\Debug\netcoreapp3.0\model.csprojAssemblyReference.cache
 C:\Users\RAZVAN\Desktop\C#\MPPCSharp\model\obj\Debug\netcoreapp3.0\model.AssemblyInfoInputs.cache
 C:\Users\RAZVAN\Desktop\C#\MPPCSharp\model\obj\Debug\netcoreapp3.0\model.AssemblyInfo.cs
 C:\Users\RAZVAN\Desktop\C#\MPPCSharp\model\bin\Debug\netcoreapp3.0\model.deps.json
@@ -6,3 +5,4 @@ C:\Users\RAZVAN\Desktop\C#\MPPCSharp\model\bin\Debug\netcoreapp3.0\model.dll
 C:\Users\RAZVAN\Desktop\C#\MPPCSharp\model\bin\Debug\netcoreapp3.0\model.pdb
 C:\Users\RAZVAN\Desktop\C#\MPPCSharp\model\obj\Debug\netcoreapp3.0\model.dll
 C:\Users\RAZVAN\Desktop\C#\MPPCSharp\model\obj\Debug\netcoreapp3.0\model.pdb
+C:\Users\RAZVAN\Desktop\C#\MPPCSharp\model\obj\Debug\netcoreapp3.0\model.csprojAssemblyReference.cache

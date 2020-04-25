@@ -99,15 +99,6 @@ namespace networking {
 				}
 			}
 
-			if (request is GetBookedTripRequest) {
-				Console.WriteLine("GetBookedTrip request ...");
-				NetBookedTripDTO netTripDTO = ((GetBookedTripRequest) request).DTO;
-				lock (_server) {
-					try { return new GetBookedTripResponse(_server.FindClientId(netTripDTO.TripId, netTripDTO.SeatNumber)); }
-					catch (AppServiceException e) { return new ErrorResponse(e.Message); }
-				}
-			}
-
 			if (request is GetBookedTripIDRequest) {
 				Console.WriteLine("GetBookedTrip request ...");
 				NetTripDTO netTripDTO = ((GetBookedTripIDRequest) request).DTO;

@@ -6,8 +6,6 @@ namespace services {
 	public interface IAppServices {
 		List<BookedTripDTO> Search(String destinationName, DateTime departure);
 
-		BookedTrip FindClientId(int tripId, int seatNumber);
-
 		void Reserve(int tripId, String clientName, int seatNumber);
 
 		List<TripDTO> ShowTrips();

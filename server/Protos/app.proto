@@ -1,0 +1,105 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+option java_multiple_files = true;
+option csharp_namespace = "AppService";
+package app;
+
+message SearchRequest{
+    string destinationName = 1;
+    google.protobuf.Timestamp departure = 2;
+}
+
+message SearchResponse {
+    repeated BookedTripDTO list = 1;
+}
+
+message BookedTripDTO{
+    int32 clientID = 1;
+    string clientName = 2;
+    int32 seatNumber = 3;
+}
+
+enum Type {
+    StartConnection = 0;
+    RequestData = 1;
+    EndConnection = 2;
+}
+
+enum ResponseType{
+    Error = 0;
+    Data = 1;
+}
+
+message ReserveRequest{
+    Type type = 1;
+    int32 userID = 2;
+    int32 tripID = 3;
+    string clientName = 4;
+    int32 seatNumber = 5;
+}
+
+message ReserveResponse {
+    ResponseType type = 1;
+    string destinationName = 2;
+    google.protobuf.Timestamp departure = 3;
+    int32 seatNumber = 4;
+    string clientName = 5;
+    string ErrorMessage = 6;
+}
+
+message ShowTripsRequest{
+    //empty
+}
+
+message ShowTripsResponse {
+    repeated TripDTO list = 1;
+}
+
+message TripDTO{
+    string destinationName = 1;
+    google.protobuf.Timestamp departure = 2;
+    int32 freeSeats = 3;
+}
+
+message GetTripIDByDestinationAndDepartureRequest{
+    string destination = 1;
+    google.protobuf.Timestamp departure = 2;
+}
+
+message GetTripIDByDestinationAndDepartureResponse {
+    int32 tripID = 1;
+}
+
+message LoginRequest{
+    string username = 1;
+    string password = 2;
+}
+
+message LoginResponse {
+    int32 id = 1;
+    string username = 2;
+    string passwordHash = 3;
+}
+
+message LogoutRequest{
+    int32 userID = 1;
+}
+
+message LogoutResponse {
+    int32 userID = 1;
+}
+
+service AppService {
+    rpc search(SearchRequest) returns (SearchResponse);
+
+    rpc reserve(stream ReserveRequest) returns (stream ReserveResponse);
+
+    rpc showTrips(ShowTripsRequest) returns (ShowTripsResponse);
+
+    rpc getTripIDByDestinationAndDeparture(GetTripIDByDestinationAndDepartureRequest) returns (GetTripIDByDestinationAndDepartureResponse);
+
+    rpc login(LoginRequest) returns (LoginResponse);
+
+    rpc logout(LogoutRequest) returns (LogoutResponse);
+}

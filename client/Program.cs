@@ -1,6 +1,5 @@
 using System;
 using System.Windows.Forms;
-using networking;
 using persistence;
 using persistence.database;
 using services;
@@ -11,12 +10,12 @@ namespace client {
 		///  The main entry point for the application.
 		/// </summary>
 		[STAThread] static void Main() {
-			Application.SetHighDpiMode(HighDpiMode.SystemAware);
-			Application.EnableVisualStyles();
-			Application.SetCompatibleTextRenderingDefault(false);
-			
-			IAppServices server = new AppProxyService("127.0.0.1", 55555);
-			Application.Run(new Form1(server));
+			// Application.SetHighDpiMode(HighDpiMode.SystemAware);
+			// Application.EnableVisualStyles();
+			// Application.SetCompatibleTextRenderingDefault(false);
+			//
+			// IAppServices server = new AppProxyService("127.0.0.1", 55555);
+			// Application.Run(new Form1(server));
 		}
 	}
 }

@@ -122,14 +122,6 @@ namespace networking {
 			return ((GetBookedTripsResponse) response).DTO;
 		}
 
-		public BookedTrip FindClientId(int tripId, int seatNumber) {
-			SendRequest(new GetBookedTripRequest(new NetBookedTripDTO(tripId, seatNumber)));
-			IResponse response = ReadResponse();
-			if (response is ErrorResponse errorResponse)
-				throw new AppServiceException(errorResponse.Message);
-			return ((GetBookedTripResponse) response).DTO;
-		}
-
 		public void Reserve(int tripId, string clientName, int seatNumber) {
 			SendRequest(new ReserveSeatRequest(new NetReservedDTO(tripId, clientName, seatNumber)));
 			IResponse response = ReadResponse();

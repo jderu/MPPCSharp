@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Net.Sockets;
-using System.Threading;
-using networking;
+using Grpc.Core;
 using persistence;
 using persistence.database;
-using services;
+
 
 namespace server {
 	class StartServer {
@@ -18,26 +16,20 @@ namespace server {
 			IDestinationRepository destinationRepo = new DatabaseDestinationRepository(jdbcUtilsApp);
 			ITripRepository tripRepo = new DatabaseTripRepository(jdbcUtilsApp);
 
-			IAppServices serviceImpl = new Server(userRepo, bookedTripRepo, clientRepo, destinationRepo, tripRepo);
+			var serviceImpl = new ServerImpl(userRepo, bookedTripRepo, clientRepo, destinationRepo, tripRepo);
 
-			SerialChatServer server = new SerialChatServer("127.0.0.1", 55555, serviceImpl);
+			var server = new Server {
+				Services = {AppService.AppService.BindService(serviceImpl)},
+				Ports = {new ServerPort("localhost", 50050, ServerCredentials.Insecure)}
+			};
+			
 			server.Start();
-			Console.WriteLine("Server started ...");
-		}
-	}
 
-	public class SerialChatServer : ConcurrentServer {
-		private IAppServices server;
-		private AppClientWorker worker;
+			Console.WriteLine("RouteGuide server listening on port " + 50050);
+			Console.WriteLine("Press any key to stop the server...");
+			Console.ReadKey();
 
-		public SerialChatServer(string host, int port, IAppServices server) : base(host, port) {
-			this.server = server;
-			Console.WriteLine("SerialChatServer...");
-		}
-
-		protected override Thread CreateWorker(TcpClient client) {
-			worker = new AppClientWorker(server, client);
-			return new Thread(worker.Run);
+			server.ShutdownAsync().Wait();
 		}
 	}
 }

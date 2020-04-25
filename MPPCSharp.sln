@@ -4,8 +4,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "client", "client\client.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "model", "model\model.csproj", "{3293DD92-BD7B-472A-8138-1400A4ACC12E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "networking", "networking\networking.csproj", "{0D204491-D39F-461A-989F-5D46DD375066}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "persistence", "persistence\persistence.csproj", "{C6EEC301-0392-411B-97E0-566D00A4AE9A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "server", "server\server.csproj", "{91BA5F29-91F2-4FE6-A8B1-45F65FBD7F69}"
@@ -26,10 +24,6 @@ Global
 		{3293DD92-BD7B-472A-8138-1400A4ACC12E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3293DD92-BD7B-472A-8138-1400A4ACC12E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3293DD92-BD7B-472A-8138-1400A4ACC12E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D204491-D39F-461A-989F-5D46DD375066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D204491-D39F-461A-989F-5D46DD375066}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D204491-D39F-461A-989F-5D46DD375066}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D204491-D39F-461A-989F-5D46DD375066}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C6EEC301-0392-411B-97E0-566D00A4AE9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C6EEC301-0392-411B-97E0-566D00A4AE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6EEC301-0392-411B-97E0-566D00A4AE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU

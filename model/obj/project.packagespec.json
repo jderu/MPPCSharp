@@ -29,6 +29,20 @@
   },
   "frameworks": {
     "netcoreapp3.0": {
+      "dependencies": {
+        "Google.Protobuf": {
+          "target": "Package",
+          "version": "[3.11.4, )"
+        },
+        "Grpc.Net.Client": {
+          "target": "Package",
+          "version": "[2.28.0, )"
+        },
+        "Grpc.Tools": {
+          "target": "Package",
+          "version": "[2.28.1, )"
+        }
+      },
       "imports": [
         "net461",
         "net462",
